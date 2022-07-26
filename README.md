@@ -25,15 +25,35 @@ function appendRandom(list) {
 }
 ```
 
+```js
+function appendRandom(list) {
+    let count = 0;
+    let rand = Math.floor(Math.random() * 100);
+    list.push(rand);
+    count++
+    console.log(`appendRandomNew List is ${list}`);
+    console.log(count)
+}
+
+appendRandom([])                                                                                                                                                                     
+appendRandom(['a'])                                                                                                                                                                  
+appendRandom(['a', 'b'])                                                                                                                                                            
+appendRandom(['a', 'b', 'c', 'd'])                                                                                                                                                  
+appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                             
+appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      
+appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'za', 'zb', 'zc', 'zd', 'ze', 'zf'])
+
+```
+
 | Append                                                                                                                                                                               | Length of Input | # of Operations |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| appendRandom([])                                                                                                                                                                     | 0               | 😴               |
-| appendRandom(['a'])                                                                                                                                                                  | 1               | 🤔               |
-| appendRandom(['a', 'b'])                                                                                                                                                            | 2               | 🤔               |
-| appendRandom(['a', 'b', 'c', 'd'])                                                                                                                                                  | 4               | 🤔               |
-| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                              | 8               | 🧐               |
-| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      | 16              | 😕               |
-| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'za', 'zb', 'zc', 'zd', 'ze', 'zf']) | 32              | 🤯               |
+| appendRandom([])                                                                                                                                                                     | 0               | 1               |
+| appendRandom(['a'])                                                                                                                                                                  | 1               | 1               |
+| appendRandom(['a', 'b'])                                                                                                                                                            | 2               | 1               |
+| appendRandom(['a', 'b', 'c', 'd'])                                                                                                                                                  | 4               | 1               |
+| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                              | 8               | 1               |
+| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      | 16              | 1               |
+| appendRandom(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'za', 'zb', 'zc', 'zd', 'ze', 'zf']) | 32              | 1               |
 
 
 ## 2. Loop
@@ -46,14 +66,35 @@ function loop(arr) {
 }
 ```
 
+```js
+function loop(arr) {
+    let count = 0;
+    for (let el in arr) {
+        count++
+        console.log(el);
+    }
+    return count
+}
+
+
+loop([])                                                                                                                                                                     
+loop(['a'])                                                                                                                                                                  
+loop(['a', 'b'])                                                                                                                                                            
+loop(['a', 'b', 'c', 'd'])                                                                                                                                                  
+loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                             
+loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      
+loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'za', 'zb', 'zc', 'zd', 'ze', 'zf'])
+
+```
+
 | Loop                                                                                                                                                                        | Length of Input | # of Operations |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| loop(['a'])                                                                                                                                                                 | 1               | 🤔               |
-| loop(['a', 'b'])                                                                                                                                                            | 2               | 🤔               |
-| loop(['a', 'b', 'c', 'd'])                                                                                                                                                  | 4               | 🤔               |
-| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                              | 8               | 🧐               |
-| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      | 16              | 😕               |
-| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','za', 'zb', 'zc', 'zd', 'ze', 'zf']) | 32              | 🤯               |
+| loop(['a'])                                                                                                                                                                 | 1               | 1               | 
+| loop(['a', 'b'])                                                                                                                                                            | 2               | 2               |
+| loop(['a', 'b', 'c', 'd'])                                                                                                                                                  | 4               | 4               |
+| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])                                                                                                                              | 8               | 8               |
+| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'])                                                                                      | 16              | 16              |
+| loop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','za', 'zb', 'zc', 'zd', 'ze', 'zf']) | 32              | 32              |
 
 ## 3. Binary Search
 
@@ -79,12 +120,12 @@ function binarySearch(list, el) {
 
 | Binary Search                                                                                                                                                                              | Length of Input | # of Operations |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| binarySearch(['a'], 'a')                                                                                                                                                                  | 1               | 😴               |
-| binarySearch(['a', 'b'], 'b')                                                                                                                                                             | 2               | 🤔               |
-| binarySearch(['a', 'b', 'c', 'd'], 'c')                                                                                                                                                   | 4               | 🤔               |
-| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 'g')                                                                                                                               | 8               | 🧐               |
-| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'], 'b')                                                                                       | 16              | 😕               |
-| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','za', 'zb', 'zc', 'zd', 'ze', 'zf'], 'zf') | 32              | 🤯               |
+| binarySearch(['a'], 'a')                                                                                                                                                                  | 1               | 1               |
+| binarySearch(['a', 'b'], 'b')                                                                                                                                                             | 2               | 2               |
+| binarySearch(['a', 'b', 'c', 'd'], 'c')                                                                                                                                                   | 4               | 2               |
+| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 'g')                                                                                                                               | 8               | 3               |
+| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'], 'b')                                                                                       | 16              | 3              |
+| binarySearch(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','za', 'zb', 'zc', 'zd', 'ze', 'zf'], 'zf') | 32              | 6              |
 
 ## 4. Nested Loop
 
